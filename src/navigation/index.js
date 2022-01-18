@@ -30,12 +30,12 @@ const Router = (props) => {
     }
 
     return(
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-                <Stack.Screen name="Home" component={ScreenHome} options={ButtonRight}/>
-                <Stack.Screen name="Form" component={ScreenForm} options={{title: "Formulário de cadastro"}} />
-            </Stack.Navigator>
-        </NavigationContainer>
+            <NavigationContainer>
+                <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
+                    <Stack.Screen name="Home" component={ScreenHome} options={ButtonRight}/>
+                    <Stack.Screen name="Form" component={ScreenForm} options={{title: "Formulário de cadastro"}} />
+                </Stack.Navigator>
+            </NavigationContainer>
 
     );
 
