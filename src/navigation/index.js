@@ -1,8 +1,11 @@
 import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from '../screens/Home'
 import { Button, Icon } from "react-native-elements";
+import { StyleSheet } from "react-native";
+import Home from '../screens/Home';
+import colors from '../utils/colors';
+
 
 /**
  * Organiza a exibição das telas
@@ -25,7 +28,7 @@ const Router = (props) => {
 
     return(
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
                 <Stack.Screen  name="Home" component={Home} options={ButtonRight}/>
             </Stack.Navigator>
         </NavigationContainer>
@@ -33,5 +36,12 @@ const Router = (props) => {
     );
 
 }
+
+const screenOptions = {
+    headerStyle: {
+        backgroundColor: colors.headerColor
+    },
+    headerTintColor: colors.headerText
+};
 
 export default Router;
