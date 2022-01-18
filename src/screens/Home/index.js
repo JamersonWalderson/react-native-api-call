@@ -1,19 +1,19 @@
-import React, { createContext } from "react";
+import React, { useContext } from "react";
 import { View, Text } from "react-native";
-import UsersContext from "../../context/usersContext";
+import { UsersContext } from "../../context/usersContext";
 
 /**
  * Tela Home
  */
-export default function ScreenHome() {
+export default function ScreenHome(props) {
     
-    const { dispatch } = useContext(UsersContext);
+    const { users } = useContext(UsersContext);
+    // console.warn(Object.keys(users));
     
     return (
-        <UsersContext.Provider>
-            <View>
-                <Text>Tela Home</Text>
-            </View>
-        </UsersContext.Provider>
+        <View>
+            <Text>Tela Home</Text>
+            <Text>{users.name}</Text>
+        </View>
     );
 }

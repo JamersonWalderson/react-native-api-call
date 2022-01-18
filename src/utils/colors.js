@@ -2,7 +2,7 @@
  * Esquema de cores do app
  */
 export default {
-    headerColor: '#f4511e',
+    headerColor: 'blue',
     headerText: '#fff',
 
 }

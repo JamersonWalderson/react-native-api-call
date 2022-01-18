@@ -1,22 +1,19 @@
-import React, { createContext, useReducer } from "react";
-// import api from '../services';
+import React, { createContext } from "react";
 
-const initialState = [];
-const UsersContext = createContext({});
+export const UsersContext = createContext({});
 
-export const UsersProvider = (props) => {
-
-    function reducer(state, action) {
-
-    }
+const UsersProvider = ({ children }) => {
+    const users = {
+        name: 'James',
+        email: 'jamersonwalderson@gmail.com'
+    };
 
 
-    const [state, dispatch] = useReducer(reducer, initialState);
     return (
-        <UsersContext.Provider value={ { state, dispatch } }>
-            {props.children}
+        <UsersContext.Provider value={{users}}>
+            { children }
         </UsersContext.Provider>
-    );
-}
+    )
+ }
 
-export default UsersContext;
+export default UsersProvider;
