@@ -4,7 +4,7 @@ import { View, Text } from "react-native";
 /**
  * Tela Home
  */
-export default function Home() {
+export default function ScreenHome() {
     
     return (
         <View>
