@@ -17,7 +17,7 @@ const Router = (props) => {
         // console.warn(Object.keys(route));
 
         const openUrl = () => {
-            Linking.openURL("https://github.com/JamersonWalderson/react-native-screens");
+            Linking.openURL("https://github.com/JamersonWalderson/react-native-api-call");
         }
 
         return ({
