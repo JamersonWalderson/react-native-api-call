@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import { Button } from "react-native-elements";
+import { UsersContext } from "../../context/usersContext";
 
 export default function ScreenForm({navigation, route}) {
 
     const [user, setUser] = useState(route.params ? route.params : {});
+
+    // const ctx = useContext(UsersContext)
+    // console.warn(Object.keys(ctx))
     
     // Onpress buttom
     const UserSave = () =>{
